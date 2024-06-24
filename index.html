@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cosmotown Bot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin-top: 90px;
+    background-color: #77b3f8;
+  }
+
+  .chat-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px 20px 40px 20px;
+    border: 1px solid #42cacf;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+
+  .chat-box {
+    height: 300px;
+    overflow-y: scroll;
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    padding: 20px 20px 10px 20px;
+    border-radius: 5px;
+  }
+
+  input[type="text"] {
+    width: calc(100% - 80px);
+    padding: 8px;
+    border: 1px solid #000000;
+    border-radius: 5px 0 0 5px;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 50px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  button:active {
+    background-color: #004999;
+  }
+
+  @media screen and (max-width: 600px) {
+    .chat-container {
+      max-width: 100%;
+    }
+
+    input[type="text"] {
+      width: calc(100% - 80px);
+    }
+  }
+</style>
+<body>
+  <div class="chat-container" id="chat-container">
+    <div class="chat-box" id="chat-box"></div>
+    <input type="text" id="user-input" placeholder="Type a message...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
